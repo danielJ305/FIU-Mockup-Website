@@ -1,0 +1,98 @@
+/***** Mobile Navbar ***/
+
+@mixin global-tools {
+    & i, span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    & i {
+        font-weight:bold;
+    }
+}
+
+@mixin logo {
+    & .fiu-logo {
+        margin:5px 0 5px 15px;
+    }
+    & img {
+        max-width: 100%;
+        height: $logo-size;
+    }
+}
+
+@mixin global-tools-anchor {
+    & a {
+        text-decoration: none;
+        color: $fiu-blue;
+        margin-right:15px;
+        padding:5px 0 5px 0;
+    }
+    & a:hover {
+        background-color: $fiu-gray-hover;
+    }
+    #search {
+        padding-left:4px;
+        padding-right:4px;
+        margin-right:0px;
+    }
+    #menu {
+        padding-left:9.2px;
+        padding-right:9.2px;
+    }
+}
+
+/***** Mobile Search Tab ***/
+@mixin mobile-search {
+        .close-button {
+        display:flex;
+        justify-content: end;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        text-decoration: none;
+        color: $fiu-blue;
+            & span,
+            i {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-weight: bold;
+            }
+            & i {
+                position: relative;
+                top: 0.9px;
+            }
+    }
+}
+
+@mixin search-links {
+    h5 {
+        font-weight:bold;
+        color:$fiu-blue;
+    }
+    li {
+        margin: 0 10px 10px 10px;
+        padding: 10px;
+        list-style: none;
+        background-color: $fiu-gray;
+        & a {
+            text-decoration: none;
+            color:$fiu-blue;
+            display: flex;
+            align-items: center;
+        }
+        & i {
+            font-size: 16px;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        & span {
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+}
+
+
+/***** Mobile Menu Tab ***/

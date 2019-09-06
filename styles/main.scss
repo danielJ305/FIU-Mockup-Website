@@ -1,0 +1,36 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+body {
+    
+}
+
+#navbar {
+    align-items: center;
+    @include logo;
+
+    .global-tools {
+        @include global-tools;
+        @include global-tools-anchor;
+        color: $fiu-blue;
+        span {
+            font-size: $global-tools-font-size;
+        }
+    }
+}
+
+
+#search-mobile-tab {
+    @include mobile-search;
+    
+    .form-control {
+        height:auto;
+    }
+    .input-group-text {
+        background-color: $fiu-yellow;
+    }
+
+    #search-links {
+        @include search-links;
+    }
+}
