@@ -42,29 +42,36 @@
     }
 }
 
-/***** Mobile Search Tab ***/
-@mixin mobile-search {
-        .close-button {
-        display:flex;
+/***** Mobile Close Button ***/
+
+@mixin mobile-close-button {
+    a.close-button {
+        display: flex;
         justify-content: end;
-        margin-top: 16px;
-        margin-bottom: 16px;
+        margin-top: 12px;
+        margin-bottom: 12px;
         text-decoration: none;
         color: $fiu-blue;
-            & span,
-            i {
-                padding-top: 5px;
-                padding-bottom: 5px;
-                font-weight: bold;
-            }
-            & i {
-                position: relative;
-                top: 0.9px;
-            }
+
+        & span,
+        i {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+
+        & i {
+            position: relative;
+            top: 0.9px;
+        }
     }
+
+    @content
 }
 
-@mixin search-links {
+/***** Mobile Search Tab ***/
+
+@mixin mobile-search-links {
     h5 {
         font-weight:bold;
         color:$fiu-blue;
@@ -92,7 +99,82 @@
             font-size: 16px;
         }
     }
+    .info-for {
+        margin-top:16px;
+    }
+    .info-for-li {
+        & a {
+            margin-left:15px;
+        }
+    }
 }
 
 
 /***** Mobile Menu Tab ***/
+
+@mixin mobile-menu {
+    color: white;
+    margin:0;
+    padding:0;
+    .menu-home-button {
+            padding: 15px;
+            padding-right:32px;
+            padding-left:32px;
+            background-color: $fiu-blue;
+            & a {
+                color: white !important;
+            }
+    }
+    #mobile-menu-dropdown {
+        li.dropdown-list {
+            list-style: none;
+            button.dropdown-button {
+                 display: flex;
+                 align-items: center;
+                 justify-content: space-between;
+                 width: 100%;
+                 height: 53.5px;
+                 border: none;
+                 padding: 0;
+                 border-bottom: 0.5px solid $fiu-blue;
+                 padding-right:15px;
+                 padding-left:32px;
+                 background-color: $fiu-blue-lighter;
+                 color: white;
+                 outline: none;
+            }
+            ul.dropdown-items {
+                padding:0;
+                margin:0;
+                li {
+                    list-style: none;
+                    height: 53.5px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 32px;
+                    border-bottom: 0.5px solid gray;
+                    background-color: white;
+                    & a {
+                        color: $fiu-blue;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+/***** Mobile Menu Dropdown JS ***/
+
+@mixin menu-dropdown-js {
+    #mobile-menu-dropdown {
+        .active {
+            display: block;
+        }
+
+        .inactive {
+            display: none;
+        }
+    }
+}

@@ -9,160 +9,33 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="output.css">
+    <link rel="stylesheet" type="text/css" href="styles/output.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>FIU Mockup</title>
 </head>
 
 <body>
-    <div id="navbar" class="d-flex justify-content-between">
-        <a href="https://www.fiu.edu/" class="fiu-logo"><img alt="Florida International University Homepage"
-                class="logo" src="images\fiu-main-logo.png"></a>
-        <div class="global-tools d-flex">
-            <a href="#" id="search" class="search">
-                <i class="material-icons">
-                    search
-                </i>
-                <span>SEARCH</span>
-            </a>
-            <a href="#" id="menu" class="menu">
-                <i class="material-icons">
-                    menu
-                </i>
-                <span>MENU</span>
-            </a>
-        </div>
-    </div>
-    <div id="search-mobile-tab" class="container">
-        <div class="row">
-            <div class="col-12 flex-column">
-                <a href="#" class="close-button">
-                    <span>CLOSE</span>
+    <main id="swup" class="transition-fade">
+        <div id="navbar" class="d-flex justify-content-between">
+            <a href="#" class="fiu-logo"><img alt="Florida International University Homepage"
+                    class="logo" src="images\fiu-main-logo.png"></a>
+            <div class="global-tools d-flex">
+                <a href="/Original/mobile-search-tab.html" id="search" class="search">
                     <i class="material-icons">
-                        clear
+                        search
                     </i>
+                    <span>SEARCH</span>
+                </a>
+                <a href="/Original/mobile-menu-tab.html" id="menu" class="menu">
+                    <i class="material-icons">
+                        menu
+                    </i>
+                    <span>MENU</span>
                 </a>
             </div>
-            <div class="col-12 flex-column">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="" aria-label="Search"
-                        aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <span class="input-group-text" id="basic-addon2"><i class="material-icons">
-                                search
-                            </i></span>
-                    </div>
-                </div>
-            </div>
-            <div id="search-links" class="col-12 flex-column">
-                <h5>Quick Links</h5>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons">
-                            phone
-                        </i>
-                        <span>Phonebook</span>
-                    </a>
-                </li>
-            </div>
         </div>
-    </div>
+    </main>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -174,6 +47,10 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="node_modules\swup\dist\swup.min.js"></script>
+    <script>
+        const swup = new Swup();
     </script>
 </body>
 

@@ -5,6 +5,8 @@ body {
     
 }
 
+/***** Mobile Navbar ***/
+
 #navbar {
     align-items: center;
     @include logo;
@@ -20,8 +22,10 @@ body {
 }
 
 
+/***** Mobile Search Tab ***/
+
 #search-mobile-tab {
-    @include mobile-search;
+    @include mobile-close-button;
     
     .form-control {
         height:auto;
@@ -31,6 +35,42 @@ body {
     }
 
     #search-links {
-        @include search-links;
+        @include mobile-search-links;
     }
 }
+
+
+/***** Mobile Menu Tab ***/
+
+#menu-mobile-tab {
+    background-color: $fiu-blue-lighter;
+ 
+/***** Mobile Menu Dropdown JS ***/
+    @include menu-dropdown-js;
+/***************************** ***/
+
+    @include mobile-close-button {
+        .close-button {
+            padding-right: 15px;
+            & span, i {
+                color: white;
+            }
+        }
+    }
+    
+    @include mobile-menu;
+}
+
+/***** SWUP ***/
+
+.transition-fade {
+    transition: 0.4s;
+    
+}
+
+html.is-animating .transition-fade {
+    
+    transform: translateX(100vw);
+}
+
+
