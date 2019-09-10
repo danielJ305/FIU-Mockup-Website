@@ -144,6 +144,8 @@
                  outline: none;
             }
             ul.dropdown-items {
+                animation-duration: 1s;
+                animation-name: slidein;
                 padding:0;
                 margin:0;
                 li {
@@ -171,10 +173,34 @@
     #mobile-menu-dropdown {
         .active {
             display: block;
+            
+    
         }
-
         .inactive {
             display: none;
+        }
+
+        button.dropdown-button {
+            & i {
+                .rotatingup {
+                    animation: rotateup 1s;
+                }
+
+                .arrow {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                @keyframes rotateup {
+                    from {
+                        transform: rotate(0deg);
+                    }
+
+                    to {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
         }
     }
 }

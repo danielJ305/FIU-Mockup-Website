@@ -172,6 +172,8 @@
   outline: none;
 }
 #menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.dropdown-items {
+  animation-duration: 1s;
+  animation-name: slidein;
   padding: 0;
   margin: 0;
 }
