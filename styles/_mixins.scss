@@ -25,6 +25,7 @@
     & a {
         text-decoration: none;
         color: $fiu-blue;
+        font-weight:500;
         margin-right:15px;
         padding:5px 0 5px 0;
     }
@@ -95,7 +96,7 @@
         }
 
         & span {
-            font-weight: 500;
+            font-weight: 600;
             font-size: 16px;
         }
     }
@@ -128,7 +129,7 @@
     #mobile-menu-dropdown {
         li.dropdown-list {
             list-style: none;
-            button.dropdown-button {
+            & button.dropdown-button {
                  display: flex;
                  align-items: center;
                  justify-content: space-between;
@@ -141,27 +142,60 @@
                  padding-left:32px;
                  background-color: $fiu-blue-lighter;
                  color: white;
+                 font-weight: 600;
                  outline: none;
+                 & img {
+                     width: 20px;
+                     height:auto;
+                 }
             }
-            ul.dropdown-items {
-                animation-duration: 1s;
-                animation-name: slidein;
+            & ul.dropdown-items {
+                display: none;
                 padding:0;
                 margin:0;
                 li {
+                    animation: slide 0.3s cubic-bezier(.76, .01, .59, 1.02);
                     list-style: none;
                     height: 53.5px;
                     display: flex;
                     align-items: center;
                     padding-left: 32px;
-                    border-bottom: 0.5px solid gray;
+                    border-bottom: 0.5px solid #dcdcdc;
                     background-color: white;
                     & a {
                         color: $fiu-blue;
+                        & span {
+                            font-weight: 600;
+                        }
                     }
                 }
             }
 
+            /** Background Color for Menu dropmenu lists **/
+            & ul.about li:nth-last-of-type(-n+1) {
+                background-color: $fiu-gray-menu !important;
+            }
+            & ul.locations li:nth-last-of-type(-n+4) {
+                background-color: $fiu-gray-menu !important;
+            }
+            & ul.admissions li:nth-last-of-type(-n+3) {
+                background-color: $fiu-gray-menu !important;
+            }
+            & ul.academics li:nth-last-of-type(-n+5) {
+                background-color: $fiu-gray-menu !important;
+            }
+            & ul.research li:nth-last-of-type(-n+3) {
+                background-color: $fiu-gray-menu !important;
+            }
+            & ul.student-life li:nth-last-of-type(-n+2) {
+                background-color: $fiu-gray-menu !important;
+            }
+            & ul.athletics li:nth-last-of-type(-n+3) {
+                background-color: $fiu-gray-menu !important;
+            }
+            & ul.alumni li:nth-last-of-type(-n+3) {
+                background-color: $fiu-gray-menu !important;
+            }
         }
     }
 
@@ -172,13 +206,21 @@
 @mixin menu-dropdown-js {
     #mobile-menu-dropdown {
         .active {
-            display: block;
-            
-    
+            display: flex !important;
+            flex-direction: column;
+            @keyframes slide {
+                from {
+                    font-size:0;
+                    height:0;
+                }
+
+                to {
+                    max-height: 100%;
+                }
+            }
         }
-        .inactive {
-            display: none;
-        }
+
+
 
         button.dropdown-button {
             & i {
@@ -190,17 +232,9 @@
                     width: 100%;
                     height: 100%;
                 }
-
-                @keyframes rotateup {
-                    from {
-                        transform: rotate(0deg);
-                    }
-
-                    to {
-                        transform: rotate(180deg);
-                    }
-                }
             }
         }
     }
 }
+
+

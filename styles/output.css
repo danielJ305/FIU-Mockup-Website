@@ -28,6 +28,7 @@
 #navbar .global-tools a {
   text-decoration: none;
   color: #081E3f;
+  font-weight: 500;
   margin-right: 15px;
   padding: 5px 0 5px 0;
 }
@@ -95,7 +96,7 @@
   font-weight: bold;
 }
 #search-mobile-tab #search-links li span {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
 }
 #search-mobile-tab #search-links .info-for {
@@ -108,6 +109,7 @@
 /***** Mobile Menu Tab ***/
 #menu-mobile-tab {
   background-color: #112D54;
+  height: 100vh;
   /***** Mobile Menu Dropdown JS ***/
   /***************************** ***/
   color: white;
@@ -115,10 +117,24 @@
   padding: 0;
 }
 #menu-mobile-tab #mobile-menu-dropdown .active {
-  display: block;
+  display: flex !important;
+  flex-direction: column;
 }
-#menu-mobile-tab #mobile-menu-dropdown .inactive {
-  display: none;
+@keyframes slide {
+  from {
+    font-size: 0;
+    height: 0;
+  }
+  to {
+    max-height: 100%;
+  }
+}
+#menu-mobile-tab #mobile-menu-dropdown button.dropdown-button i .rotatingup {
+  animation: rotateup 1s;
+}
+#menu-mobile-tab #mobile-menu-dropdown button.dropdown-button i .arrow {
+  width: 100%;
+  height: 100%;
 }
 #menu-mobile-tab a.close-button {
   display: flex;
@@ -143,6 +159,7 @@
 }
 #menu-mobile-tab .close-button span, #menu-mobile-tab .close-button i {
   color: white;
+  font-weight: 500;
 }
 #menu-mobile-tab .menu-home-button {
   padding: 15px;
@@ -155,6 +172,7 @@
 }
 #menu-mobile-tab #mobile-menu-dropdown li.dropdown-list {
   list-style: none;
+  /** Background Color for Menu dropmenu lists **/
 }
 #menu-mobile-tab #mobile-menu-dropdown li.dropdown-list button.dropdown-button {
   display: flex;
@@ -169,25 +187,57 @@
   padding-left: 32px;
   background-color: #112D54;
   color: white;
+  font-weight: 600;
   outline: none;
 }
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list button.dropdown-button img {
+  width: 20px;
+  height: auto;
+}
 #menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.dropdown-items {
-  animation-duration: 1s;
-  animation-name: slidein;
+  display: none;
   padding: 0;
   margin: 0;
 }
 #menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.dropdown-items li {
+  animation: slide 0.3s cubic-bezier(0.76, 0.01, 0.59, 1.02);
   list-style: none;
   height: 53.5px;
   display: flex;
   align-items: center;
   padding-left: 32px;
-  border-bottom: 0.5px solid gray;
+  border-bottom: 0.5px solid #dcdcdc;
   background-color: white;
 }
 #menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.dropdown-items li a {
   color: #081E3f;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.dropdown-items li a span {
+  font-weight: 600;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.about li:nth-last-of-type(-n+1) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.locations li:nth-last-of-type(-n+4) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.admissions li:nth-last-of-type(-n+3) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.academics li:nth-last-of-type(-n+5) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.research li:nth-last-of-type(-n+3) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.student-life li:nth-last-of-type(-n+2) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.athletics li:nth-last-of-type(-n+3) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.alumni li:nth-last-of-type(-n+3) {
+  background-color: #f5f5f5 !important;
 }
 
 /***** SWUP ***/

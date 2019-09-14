@@ -44,7 +44,7 @@ body {
 
 #menu-mobile-tab {
     background-color: $fiu-blue-lighter;
- 
+    height:100vh;
 /***** Mobile Menu Dropdown JS ***/
     @include menu-dropdown-js;
 /***************************** ***/
@@ -54,6 +54,7 @@ body {
             padding-right: 15px;
             & span, i {
                 color: white;
+                font-weight:500;
             }
         }
     }
