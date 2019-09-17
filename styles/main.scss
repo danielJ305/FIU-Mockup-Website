@@ -62,16 +62,3 @@ body {
     @include mobile-menu;
 }
 
-/***** SWUP ***/
-
-.transition-fade {
-    transition: 0.4s;
-    
-}
-
-html.is-animating .transition-fade {
-    
-    transform: translateX(100vw);
-}
-
-
