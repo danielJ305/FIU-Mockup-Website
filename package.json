@@ -1,0 +1,22 @@
+{
+  "name": "original",
+  "version": "1.0.0",
+  "description": "",
+  "main": "intro-vid-button.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielJ305/FIU-Mockup-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielJ305/FIU-Mockup-Website/issues"
+  },
+  "homepage": "https://github.com/danielJ305/FIU-Mockup-Website#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}

@@ -1,47 +1,93 @@
+/***** Headings ***/
+
+@mixin headings {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Arvo',
+        serif;
+    }
+    p, span {
+        font-family: 'Open Sans',
+        sans-serif;
+    }
+}
+
 /***** Mobile Navbar ***/
 
-@mixin global-tools {
-    & i, span {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    & i {
-        font-weight:bold;
-    }
-}
+@mixin mobile-navbar {
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
+    position: relative;
+    z-index: 15;
+    height:48px;
+    display: flex;
+    align-items: center;
 
-@mixin logo {
     & .fiu-logo {
-        margin:5px 0 5px 15px;
+        padding-left: 15px;
+        & img {
+            max-width: 100%;
+            height: $logo-size;
+        }
     }
-    & img {
-        max-width: 100%;
-        height: $logo-size;
+
+    .global-tools {
+        padding-right:15px;
+        color: $fiu-blue;
+
+        span {
+            font-size: $global-tools-font-size;
+        }
+        & i,
+        span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        & a, i {
+            text-decoration: none;
+            color: $fiu-blue;
+            font-weight: 500;
+        }
+        & a {
+            padding-top:5px;
+            padding-bottom: 5px;
+        }
+        a.search {
+            margin-right:10px;
+            padding-left:3px;
+            padding-right:3px;
+        }
+        a.menu {
+            padding-left:7.7px;
+            padding-right:7.7px;
+        }
+        & i {
+            font-size:20px;
+            font-weight: 700 !important;
+        }
+        & a:hover {
+            background-color: $fiu-gray-hover;
+        }
     }
 }
 
-@mixin global-tools-anchor {
-    & a {
-        text-decoration: none;
-        color: $fiu-blue;
-        font-weight:500;
-        margin-right:15px;
-        padding:5px 0 5px 0;
-    }
-    & a:hover {
-        background-color: $fiu-gray-hover;
-    }
-    #search {
-        padding-left:4px;
-        padding-right:4px;
-        margin-right:0px;
-    }
-    #menu {
-        padding-left:9.2px;
-        padding-right:9.2px;
-    }
+
+/***** Campus & Community Section ***/
+
+@mixin c-c-section {
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /***** Mobile Close Button ***/
 
@@ -69,6 +115,72 @@
 
     @content
 }
+
+/***** Intro Vid Section ***/
+
+@mixin intro-vid-sec {
+    .intro-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & video {
+            position: absolute;
+            top:48px;
+            left:0;
+            object-fit: cover;
+            width:100%;
+            height: 450px;
+            pointer-events: none;
+        }
+
+        .intro-vid-bg {
+            z-index: 10;
+            background-color:rgba(0, 0, 0, 0.4);
+            
+            & .vid-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                height: 450px;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                & h1 {
+                    color: white;
+                    font-size: 35px;
+                }
+
+                & button {
+                    outline-style: none;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    top: 115px;
+                    padding: 6px 13px 6px 13px;
+                    border-radius: 5px;
+                    border: 0px;
+                    background-color: white;
+
+                    & i {
+                        font-weight: bold;
+                        color: $fiu-blue;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
 
 /***** Mobile Search Tab ***/
 

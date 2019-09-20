@@ -1,53 +1,128 @@
+/***** Headings ***/
 /***** Mobile Navbar ***/
+/***** Campus & Community Section ***/
 /***** Mobile Close Button ***/
+/***** Intro Vid Section ***/
 /***** Mobile Search Tab ***/
 /***** Mobile Menu Tab ***/
 /***** Mobile Menu Dropdown JS ***/
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Arvo", serif;
+}
+body p, body span {
+  font-family: "Open Sans", sans-serif;
+}
+
 /***** Mobile Navbar ***/
 #navbar {
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
+  position: relative;
+  z-index: 15;
+  height: 48px;
+  display: flex;
   align-items: center;
 }
 #navbar .fiu-logo {
-  margin: 5px 0 5px 15px;
+  padding-left: 15px;
 }
-#navbar img {
+#navbar .fiu-logo img {
   max-width: 100%;
   height: 30px;
 }
 #navbar .global-tools {
+  padding-right: 15px;
   color: #081E3f;
-}
-#navbar .global-tools i, #navbar .global-tools span {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#navbar .global-tools i {
-  font-weight: bold;
-}
-#navbar .global-tools a {
-  text-decoration: none;
-  color: #081E3f;
-  font-weight: 500;
-  margin-right: 15px;
-  padding: 5px 0 5px 0;
-}
-#navbar .global-tools a:hover {
-  background-color: #f1f1f1;
-}
-#navbar .global-tools #search {
-  padding-left: 4px;
-  padding-right: 4px;
-  margin-right: 0px;
-}
-#navbar .global-tools #menu {
-  padding-left: 9.2px;
-  padding-right: 9.2px;
 }
 #navbar .global-tools span {
   font-size: 12px;
 }
+#navbar .global-tools i,
+#navbar .global-tools span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#navbar .global-tools a, #navbar .global-tools i {
+  text-decoration: none;
+  color: #081E3f;
+  font-weight: 500;
+}
+#navbar .global-tools a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#navbar .global-tools a.search {
+  margin-right: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+#navbar .global-tools a.menu {
+  padding-left: 7.7px;
+  padding-right: 7.7px;
+}
+#navbar .global-tools i {
+  font-size: 20px;
+  font-weight: 700 !important;
+}
+#navbar .global-tools a:hover {
+  background-color: #f1f1f1;
+}
 
+/***** Intro Vid Section ***/
+#intro-vid-section .intro-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#intro-vid-section .intro-wrapper video {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 450px;
+  pointer-events: none;
+}
+#intro-vid-section .intro-wrapper .intro-vid-bg {
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#intro-vid-section .intro-wrapper .intro-vid-bg .vid-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 450px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#intro-vid-section .intro-wrapper .intro-vid-bg .vid-content h1 {
+  color: white;
+  font-size: 35px;
+}
+#intro-vid-section .intro-wrapper .intro-vid-bg .vid-content button {
+  outline-style: none;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 115px;
+  padding: 6px 13px 6px 13px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: white;
+}
+#intro-vid-section .intro-wrapper .intro-vid-bg .vid-content button i {
+  font-weight: bold;
+  color: #081E3f;
+}
+
+/***** Campus & Community Section ***/
 /***** Mobile Search Tab ***/
 #search-mobile-tab a.close-button {
   display: flex;

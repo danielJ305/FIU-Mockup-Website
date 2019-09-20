@@ -2,24 +2,62 @@
 @import "mixins.scss";
 
 body {
-    
+    @include headings;
 }
 
 /***** Mobile Navbar ***/
 
 #navbar {
-    align-items: center;
-    @include logo;
-
-    .global-tools {
-        @include global-tools;
-        @include global-tools-anchor;
-        color: $fiu-blue;
-        span {
-            font-size: $global-tools-font-size;
-        }
-    }
+    @include mobile-navbar;
 }
+
+/***** Intro Vid Section ***/
+
+#intro-vid-section {
+    @include intro-vid-sec;
+}
+
+/***** Campus & Community Section ***/
+
+
+
+// #campus-community-section {
+//     .c-c-wrapper {
+//         @include make-container();
+//     }
+
+//     .c-c-content {
+//         @include make-row();
+//     }
+
+//     .c-c-img-div {
+//         @include make-col-ready();
+
+//         @include media-breakpoint-up(xs) {
+//             @include make-col(12);
+//         }
+
+//         @include media-breakpoint-up(sm) {
+//             @include make-col(6);
+//         }
+//     }
+
+//     .c-c-text {
+//         @include make-col-ready();
+
+//         @include media-breakpoint-up(xs) {
+//             @include make-col(12);
+//         }
+
+//         @include media-breakpoint-up(sm) {
+//             @include make-col(6);
+//         }
+//     }
+// }
+
+// @import "../node_modules/bootstrap/scss/bootstrap";
+// @import "../node_modules/bootstrap/scss/mixins";
+
 
 
 /***** Mobile Search Tab ***/

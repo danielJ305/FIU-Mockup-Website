@@ -11,31 +11,61 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles\output.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:700|Open+Sans&display=swap" rel="stylesheet">
     <title>FIU Mockup</title>
 </head>
 
 <body>
-        <div id="navbar" class="d-flex justify-content-between">
-            <a href="#" class="fiu-logo"><img alt="Florida International University Homepage"
-                    class="logo" src="images\fiu-main-logo.png"></a>
-            <div class="global-tools d-flex">
-                <a href="mobile-search-tab.html" id="search" class="search">
-                    <i class="material-icons">
-                        search
-                    </i>
-                    <span>SEARCH</span>
-                </a>
-                <a href="mobile-menu-tab.html" id="menu" class="menu">
-                    <i class="material-icons">
-                        menu
-                    </i>
-                    <span>MENU</span>
-                </a>
+    <div id="navbar" class="d-flex justify-content-between">
+        <a href="#" class="fiu-logo"><img alt="Florida International University Homepage" class="logo"
+                src="images\fiu-main-logo.png"></a>
+        <div class="global-tools d-flex">
+            <a href="mobile-search-tab.html" id="search" class="search">
+                <i class="material-icons">
+                    search
+                </i>
+                <span>SEARCH</span>
+            </a>
+            <a href="mobile-menu-tab.html" id="menu" class="menu">
+                <i class="material-icons">
+                    menu
+                </i>
+                <span>MENU</span>
+            </a>
+        </div>
+    </div>
+    <div id="intro-vid-section">
+        <div class="intro-wrapper">
+            <video autoplay muted loop class="intro-video">
+                <source src="images\intro-vid.mp4" type="video/mp4" />
+            </video>
+            <div class="intro-vid-bg">
+                <div class="vid-content">
+                    <h1>Florida International University</h1>
+                    <button class="intro-vid-button"><i class="material-icons">
+                            pause
+                        </i></button>
+                </div>
             </div>
         </div>
-        <div id="intro-vid-section">
-
-        </div>
+    </div>
+    <div id="campus-community-section">
+        <a href="#">
+            <div class="c-c-wrapper">
+                <div class="c-c-content">
+                    <div class="c-c-img-div">
+                        <img src="images\fiucampuspreview.jpg" alt="">
+                    </div>
+                    <div class="c-c-text">
+                        <span>Campus & Community</span>
+                        <h5>Take a brief survey of the FIU Alert system</h5>
+                        <p>Your feedback will provide emergency managers important feedback regarding the success of
+                            this test.</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 
 
     <!-- Optional JavaScript -->
@@ -50,7 +80,8 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script type="text/javascript" src="mobile-menu-dropdown.js"></script>
-    
+    <script src="intro-vid-button.js"></script>
+
 </body>
 
 </html>
