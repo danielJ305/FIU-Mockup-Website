@@ -165,7 +165,7 @@ body p, body span, body a {
   display: block;
   border: solid 1px #DDD !important;
   background-color: white;
-  max-width: 1000px;
+  max-width: 930px;
   margin: auto;
 }
 #campus-community-section .c-c-wrapper:hover {
@@ -225,59 +225,12 @@ body p, body span, body a {
 }
 
 /***** Degree Section ***/
-#degree-section {
-  background-color: #081E3f;
-  color: white;
-}
 #degree-section .degrees {
-  padding: 25px 20px 25px 20px;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  background-color: green;
 }
-#degree-section .degrees .deg-content {
-  display: flex;
-  flex-direction: column;
-  padding-right: 20px;
-}
-#degree-section .degrees .deg-content .dropdown .btn {
-  border-radius: 0% !important;
-  padding: 13px 10px 13px 10px;
-  border: #DDD 5px solid;
-  background-color: white;
-  color: #081E3f;
-  width: 100%;
-  max-width: 360px;
-  text-align: left;
-}
-#degree-section .degrees .deg-content .dropdown .dropdown-toggle::after {
-  position: relative !important;
-  right: -130px !important;
-}
-@media (min-width: 420px) {
-  #degree-section .degrees .deg-content .dropdown .dropdown-toggle::after {
-    position: relative !important;
-    right: -155px !important;
-  }
-}
-#degree-section .degrees .deg-content span {
-  padding-top: 10px;
-}
-#degree-section .degrees .deg-content span a {
-  color: white;
-  text-decoration: underline;
-}
-#degree-section .degrees .deg-img {
-  display: none;
-  max-width: 350px;
-}
-#degree-section .degrees .deg-img img {
-  width: 100%;
-  height: auto;
-}
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   #degree-section .degrees .deg-img {
-    display: block;
+    display: none;
   }
 }
 

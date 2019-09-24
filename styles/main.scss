@@ -1,5 +1,7 @@
 @import "variables.scss";
+@import "homepage-mixins.scss";
 @import "mixins.scss";
+
 
 body {
     @include headings;
@@ -21,6 +23,12 @@ body {
 
 #campus-community-section {
     @include campus-community-section;
+}
+
+/***** Degree Section ***/
+
+#degree-section {
+    @include degree-section;
 }
 
 
