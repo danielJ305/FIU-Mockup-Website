@@ -71,10 +71,192 @@
 }
 
 
+/***** Intro Vid Section ***/
+
+@mixin intro-vid-sec {
+    .intro-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & video {
+            position: absolute;
+            top: 48px;
+            left: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 450px;
+            pointer-events: none;
+        }
+
+        .intro-vid-bg {
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0.4);
+
+            & .vid-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                height: 450px;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                & h1 {
+                    color: white;
+                    font-size: 35px;
+                }
+
+                & button {
+                    outline-style: none;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 435px;
+                    padding: 6px 13px 6px 13px;
+                    border-radius: 5px;
+                    border: 0px;
+                    background-color: white;
+
+                    & i {
+                        font-weight: bold;
+                        color: $fiu-blue;
+                    }
+                }
+            }
+        }
+    }
+  
+    @media (min-width: 576px) {
+        .intro-wrapper {
+            & video {
+                height: 550px;
+            }
+        }
+        .intro-vid-bg {
+            width: 100%;
+            height: 550px;
+
+            & .vid-content {
+                & button {
+                    position: absolute;
+                    top: 530px !important;
+                }
+            }
+        }
+    }
+    @media (min-width: 1024px) {
+        .intro-wrapper {
+            & video {
+                height: 700px;
+            }
+        }
+
+        .intro-vid-bg {
+            width: 100%;
+            height: 700px;
+
+            & .vid-content {
+                & button {
+                    position: absolute;
+                    top: 680px !important;
+                }
+            }
+        }
+    }
+}
+
+
 /***** Campus & Community Section ***/
 
-@mixin c-c-section {
+@mixin campus-community-section {
+    padding:20px;
+    padding-top:40px;
+    padding-bottom:40px;
+    a {
+        text-decoration: none;
+    }
+    .c-c-wrapper {
+        padding:20px;
+        transition: border-color 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
+        display: block;
+        border: solid 1px #DDD !important;
+        background-color: white;
+        max-width: 930px;
+        margin:auto;
+    }
+    .c-c-wrapper:hover {
+        box-shadow: #d4d4d4 0 0 7px;
+        border: solid 1px #c4c4c4 !important;
+    }
 
+    .c-c-content {
+        & .c-c-img-div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            & img {
+                max-width: 350px;
+                width: 100%;
+                height: auto;
+                margin-left:auto;
+                margin-right:auto;
+            }
+        }
+        & .c-c-text {
+            padding-top:5px;
+            
+            & p {
+                color: #333;
+            }
+            & span {
+                color: #505050;
+                font-size: 12px;
+                font-weight: 700;
+                padding-bottom: 5px;
+            }
+            & h5 {
+                color: $fiu-blue;
+            }
+        }
+    }
+
+    a {
+        padding:0;
+    }
+    .no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+
+        >.col,
+        >[class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    @media (min-width: 576px) {        
+        .c-c-content {
+            & .c-c-text {
+                padding-left:20px;
+                padding-right:20px;
+            }
+
+            & .c-c-img-div {
+                order: 1;
+            }
+            & .c-c-text {
+                order: 2;
+            }
+        } 
+    }
 }
 
 
@@ -114,70 +296,6 @@
     }
 
     @content
-}
-
-/***** Intro Vid Section ***/
-
-@mixin intro-vid-sec {
-    .intro-wrapper {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        & video {
-            position: absolute;
-            top:48px;
-            left:0;
-            object-fit: cover;
-            width:100%;
-            height: 450px;
-            pointer-events: none;
-        }
-
-        .intro-vid-bg {
-            z-index: 10;
-            background-color:rgba(0, 0, 0, 0.4);
-            
-            & .vid-content {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                max-width: 100%;
-                height: 450px;
-                padding-left: 15px;
-                padding-right: 15px;
-
-                & h1 {
-                    color: white;
-                    font-size: 35px;
-                }
-
-                & button {
-                    outline-style: none;
-                    box-sizing: border-box;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    position: relative;
-                    top: 115px;
-                    padding: 6px 13px 6px 13px;
-                    border-radius: 5px;
-                    border: 0px;
-                    background-color: white;
-
-                    & i {
-                        font-weight: bold;
-                        color: $fiu-blue;
-                    }
-                }
-            }
-        }
-    }
-
 }
 
 
