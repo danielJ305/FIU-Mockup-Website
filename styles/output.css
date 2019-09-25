@@ -298,7 +298,7 @@ body p, body span, body a {
 }
 @media (min-width: 768px) {
   #research {
-    min-height: 650px;
+    min-height: 680px;
   }
 }
 @media (min-width: 1024px) {
@@ -314,7 +314,7 @@ body p, body span, body a {
     display: block;
     object-fit: cover;
     width: 100%;
-    min-height: 650px;
+    min-height: 680px;
     position: absolute;
     z-index: -1;
   }

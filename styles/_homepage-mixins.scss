@@ -356,7 +356,7 @@
     }
 
     @media (min-width: 768px) {
-        min-height:650px;
+        min-height:680px;
     }
     @media (min-width: 1024px) {
         height: 750px;
@@ -368,7 +368,7 @@
             display: block;
             object-fit: cover;
             width: 100%;
-            min-height: 650px;
+            min-height: 680px;
             position: absolute;
             z-index: -1;
         }
