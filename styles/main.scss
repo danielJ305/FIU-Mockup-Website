@@ -31,6 +31,12 @@ body {
     @include degree-section;
 }
 
+/***** Research Section ***/
+
+#research {
+    @include research;
+}
+
 
 /***** Mobile Search Tab ***/
 
