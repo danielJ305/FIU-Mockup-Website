@@ -1,13 +1,14 @@
-/***** Mobile Navbar ***/
-/***** Intro Vid Section ***/
-/***** Campus & Community Section ***/
-/***** Degrees Section ***/
-/***** Research Section ***/
 /***** Headings ***/
 /***** Mobile Close Button ***/
 /***** Mobile Search Tab ***/
 /***** Mobile Menu Tab ***/
 /***** Mobile Menu Dropdown JS ***/
+/***** Mobile Navbar ***/
+/***** Intro Vid Section ***/
+/***** Campus & Community Section ***/
+/***** Degrees Section ***/
+/***** Research Section ***/
+/***** Footer ***/
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "Arvo", serif;
 }
@@ -371,6 +372,83 @@ body p, body span, body a {
 }
 #research .res-imgs div:hover a span {
   color: #081E3f;
+}
+
+/***** Footer ***/
+#footer {
+  background-color: #081E3f;
+  display: flex;
+  justify-content: center;
+}
+#footer .footer-wrapper {
+  color: white;
+  max-width: 1177.2px;
+  padding: 25px;
+}
+#footer .footer-wrapper .connect h6 {
+  padding-top: 15px;
+}
+#footer .footer-wrapper .connect img {
+  width: 300px;
+  height: auto;
+}
+#footer .footer-wrapper .connect li {
+  list-style: none;
+}
+#footer .footer-wrapper .connect li a {
+  color: #F8C93E;
+  text-decoration: underline;
+}
+#footer .footer-wrapper .connect ul {
+  padding: 0;
+  padding-top: 5px;
+}
+#footer .footer-wrapper .connect ul a i {
+  color: white;
+}
+#footer .footer-wrapper .explore li {
+  list-style: none;
+}
+#footer .footer-wrapper .explore li a {
+  color: #F8C93E;
+  text-decoration: underline;
+}
+#footer .footer-wrapper .tools .tools li:first-child {
+  color: red;
+}
+#footer .footer-wrapper .tools li {
+  list-style: none;
+}
+#footer .footer-wrapper .tools li a {
+  color: #F8C93E;
+  text-decoration: underline;
+}
+#footer .footer-wrapper .copyright {
+  padding: 10px;
+  padding-top: 20px;
+  text-align: center;
+}
+#footer .footer-wrapper .copyright small a {
+  color: #F8C93E;
+}
+@media (max-width: 576px) {
+  #footer .footer-wrapper {
+    text-align: center;
+  }
+}
+@media (min-width: 576px) {
+  #footer .footer-wrapper .connect {
+    order: 3;
+  }
+  #footer .footer-wrapper .explore {
+    order: 1;
+  }
+  #footer .footer-wrapper .tools {
+    order: 2;
+  }
+  #footer .footer-wrapper .copyright {
+    order: 4;
+  }
 }
 
 /***** Mobile Search Tab ***/

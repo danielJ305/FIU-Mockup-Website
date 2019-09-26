@@ -1,6 +1,6 @@
 @import "variables.scss";
-@import "homepage-mixins.scss";
 @import "mixins.scss";
+@import "homepage-mixins.scss";
 
 
 body {
@@ -36,6 +36,13 @@ body {
 #research {
     @include research;
 }
+
+/***** Footer ***/
+
+#footer {
+    @include footer;
+}
+
 
 
 /***** Mobile Search Tab ***/

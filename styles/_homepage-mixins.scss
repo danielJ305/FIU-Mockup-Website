@@ -431,3 +431,96 @@
         }
     }
 }
+
+
+/***** Footer ***/
+
+@mixin footer {
+    background-color:$fiu-blue;
+    display: flex;
+    justify-content: center;
+
+    .footer-wrapper {
+        color: white;
+        max-width: 1177.2px;
+        padding:25px;
+
+        & .connect {
+            & h6 {
+                padding-top:15px;
+            }
+            & img {
+                width:300px;
+                height: auto;
+            }
+            & li {
+                list-style: none;
+                & a {
+                    color: $fiu-yellow;
+                    text-decoration: underline;
+                }
+            }
+            & ul {
+                padding:0;
+                padding-top:5px;
+                & a {
+                    & i {
+                        color:white;
+                    }
+                }
+            }
+        }
+        & .explore {
+            & li {
+                list-style: none;
+
+                & a {
+                    color: $fiu-yellow;
+                    text-decoration: underline;
+                }
+            }
+        }
+        & .tools {
+            & .tools li:first-child {
+                color: red;
+            }
+            & li {
+                list-style: none;
+                
+                & a {
+                    color: $fiu-yellow;
+                    text-decoration: underline;
+                }
+            }
+        }
+        & .copyright {
+            padding:10px;
+            padding-top:20px;
+            text-align: center;
+            & small {
+                
+                & a {
+                    color:$fiu-yellow;
+                }
+            }
+        }
+
+        @media (max-width:576px) {
+            text-align: center;
+        }
+        @media (min-width:576px) {
+            .connect {
+                order:3
+            }
+            .explore {
+                order: 1;
+            }
+            .tools {
+                order: 2;
+            }
+            .copyright {
+                order: 4;
+            }
+        }
+    }
+}
