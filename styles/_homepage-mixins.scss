@@ -1,69 +1,82 @@
 /***** Mobile Navbar ***/
 
 @mixin mobile-navbar {
-    box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
-    position: relative;
-    z-index: 15;
-    height: 48px;
-    display: flex;
-    align-items: center;
+    & .mobile-navbar {
+        box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
+        position: relative;
+        z-index: 15;
+        height: 48px;
+        display: flex;
+        align-items: center;
 
-    & .fiu-logo {
-        padding-left: 15px;
+        & .fiu-logo {
+            padding-left: 15px;
 
-        & img {
-            max-width: 100%;
-            height: $logo-size;
-        }
-    }
-
-    .global-tools {
-        padding-right: 15px;
-        color: $fiu-blue;
-
-        span {
-            font-size: $global-tools-font-size;
+            & img {
+                max-width: 100%;
+                height: $logo-size;
+            }
         }
 
-        & i,
-        span {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        & a,
-        i {
-            text-decoration: none;
+        .global-tools {
+            padding-right: 15px;
             color: $fiu-blue;
-            font-weight: 500;
-        }
 
-        & a {
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
+            span {
+                font-size: $global-tools-font-size;
+            }
 
-        a.search {
-            margin-right: 10px;
-            padding-left: 3px;
-            padding-right: 3px;
-        }
+            & i,
+            span {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
 
-        a.menu {
-            padding-left: 7.7px;
-            padding-right: 7.7px;
-        }
+            & a,
+            i {
+                text-decoration: none;
+                color: $fiu-blue;
+                font-weight: 500;
+            }
 
-        & i {
-            font-size: 20px;
-            font-weight: 700 !important;
-        }
+            & a {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
 
-        & a:hover {
-            background-color: $fiu-gray-hover;
+            a.search {
+                margin-right: 10px;
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+
+            a.menu {
+                padding-left: 7.7px;
+                padding-right: 7.7px;
+            }
+
+            & i {
+                font-size: 20px;
+                font-weight: 700 !important;
+            }
+
+            & a:hover {
+                background-color: $fiu-gray-hover;
+            }
+        }
+        @media (min-width:1024px) {
+            display: none;
         }
     }
+
+    & .regular-navbar {
+        display: none;
+        @media (min-width:1024px) {
+            display: flex;
+        }
+    }
+    
 }
 
 
@@ -361,6 +374,9 @@
     @media (min-width: 1024px) {
         height: 750px;
     }
+    @media (min-width: 1440px) {
+        height: 850px;
+    }
 
     & video {
         display: none;
@@ -374,6 +390,9 @@
         }
         @media (min-width: 1024px) {
             height: 750px;
+        }
+        @media (min-width: 1440px) {
+            height: 850px;
         }
     }
     
