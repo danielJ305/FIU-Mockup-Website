@@ -17,7 +17,7 @@
 @mixin mobile-close-button {
     a.close-button {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         margin-top: 12px;
         margin-bottom: 12px;
         text-decoration: none;
@@ -35,49 +35,81 @@
             top: 0.9px;
         }
     }
-
-    @content
+    @content;
+    
 }
 
 
 
 /***** Mobile Search Tab ***/
 
-@mixin mobile-search-links {
-    h5 {
-        font-weight:bold;
-        color:$fiu-blue;
+@mixin search-tab {
+    max-width: 1000px;
+    margin:auto;
+    .form-control {
+        height: auto;
     }
-    li {
-        margin: 0 10px 10px 10px;
-        padding: 10px;
-        list-style: none;
-        background-color: $fiu-gray;
-        & a {
-            text-decoration: none;
-            color:$fiu-blue;
-            display: flex;
-            align-items: center;
-        }
-        & i {
-            font-size: 16px;
-            margin-left: 10px;
-            margin-right: 10px;
-            font-weight: bold;
-        }
 
-        & span {
-            font-weight: 600;
-            font-size: 16px;
-        }
+    .input-group-text {
+        background-color: $fiu-yellow;
     }
-    .info-for {
-        margin-top:16px;
-    }
-    .info-for-li {
-        & a {
-            margin-left:15px;
-        }
+    #search-links {
+        padding: 0 15px 0 15px;
+        & div.search-items {
+            justify-content: center !important;
+
+            & h5 {
+                font-weight: bold;
+                color: $fiu-blue;
+            }
+
+            & li {
+                margin: 0 10px 10px 10px;
+                padding: 10px;
+                list-style: none;
+                background-color: $fiu-gray;
+                @media (min-width:1000px) {
+                    max-width: 303px;
+                }
+                & a {
+                    text-decoration: none;
+                    color: $fiu-blue;
+                    display: flex;
+                    align-items: center;
+                }
+
+                & i {
+                    font-size: 16px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    font-weight: bold;
+                }
+
+                & span {
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+                
+            }
+            li:not(.material-icons):hover {
+                 
+                    text-decoration: underline;
+                    background-color: #e6e6e6;
+                
+             }
+
+            .info-for-title {
+                margin-top: 16px;
+            }
+
+            .info-for {
+                .info-for-li {
+                    & a {
+                        margin-left: 15px;
+                    }
+                }
+            }
+        } 
     }
 }
 

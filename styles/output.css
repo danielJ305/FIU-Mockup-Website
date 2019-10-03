@@ -103,7 +103,7 @@ body p, body span, body a {
 }
 #navbar .regular-navbar .nav-header #navbarNavDropdown {
   margin-right: 15px !important;
-  justify-content: end !important;
+  justify-content: flex-end !important;
 }
 #navbar .regular-navbar .nav-header #navbarNavDropdown .navbar-nav {
   display: flex !important;
@@ -149,6 +149,8 @@ body p, body span, body a {
   background-color: #081E3f;
   display: flex;
   justify-content: center;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  z-index: 500;
 }
 #navbar .regular-navbar .big-nav .big-nav-wrap {
   max-width: 1000px;
@@ -167,19 +169,47 @@ body p, body span, body a {
   height: 100%;
   padding: 15px;
   background-color: #081E3f;
+  outline: 0;
+  position: relative;
+}
+#navbar .regular-navbar .big-nav .big-nav-wrap li button span {
   color: white;
   font-weight: 600;
-  outline: 0;
+  font-size: 14.5px;
+}
+#navbar .regular-navbar .big-nav .big-nav-wrap li button span::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 12px 0 12px;
+  border-color: transparent transparent transparent transparent;
+  z-index: 400;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: block;
 }
 #navbar .regular-navbar .big-nav .big-nav-wrap li button:hover {
-  text-decoration: underline;
   background-color: #112D54;
+}
+#navbar .regular-navbar .big-nav .big-nav-wrap li button:hover span {
+  text-decoration: underline;
 }
 #navbar .regular-navbar .big-nav .big-nav-wrap li .active {
   background-color: #F8C93E !important;
-  color: #081E3f;
+}
+#navbar .regular-navbar .big-nav .big-nav-wrap li .active span {
+  color: #081E3f !important;
   text-decoration: none !important;
+}
+#navbar .regular-navbar .big-nav .big-nav-wrap li .active span::after {
+  bottom: -14px;
+  -webkit-transition: 0.15s ease bottom;
   transition: 0.15s ease bottom;
+  border-color: #F8C93E transparent transparent transparent;
 }
 #navbar .regular-navbar .big-nav .big-nav-wrap li.logo {
   width: 137px;
@@ -196,6 +226,7 @@ body p, body span, body a {
   z-index: 300;
   background-color: #f7f7f7;
   padding: 0;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
 }
 #navbar .regular-navbar .big-nav .big-nav-wrap li ul.dropdown-big-nav .dropdown-wrap {
   max-width: 1000px;
@@ -531,6 +562,50 @@ body p, body span, body a {
     padding-top: 4vw;
   }
 }
+#research .res-content div button {
+  display: none;
+  outline-style: none;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 6px 13px 6px 13px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: white;
+}
+@media (min-width: 768px) {
+  #research .res-content div button {
+    display: flex;
+    top: 292px;
+    left: 250px;
+  }
+}
+@media (min-width: 795px) {
+  #research .res-content div button {
+    top: 255px;
+  }
+}
+@media (min-width: 843px) {
+  #research .res-content div button {
+    top: 228px;
+  }
+}
+@media (min-width: 998px) {
+  #research .res-content div button {
+    top: 205px;
+  }
+}
+@media (min-width: 1024px) {
+  #research .res-content div button {
+    top: 245px;
+    left: 0px;
+  }
+}
+#research .res-content div button i {
+  font-weight: bold;
+  color: #081E3f;
+}
 #research .res-content div span a {
   color: white;
   text-decoration: underline;
@@ -644,9 +719,67 @@ body p, body span, body a {
 }
 
 /***** Mobile Search Tab ***/
+#search-mobile-tab {
+  max-width: 1000px;
+  margin: auto;
+}
+#search-mobile-tab .form-control {
+  height: auto;
+}
+#search-mobile-tab .input-group-text {
+  background-color: #F8C93E;
+}
+#search-mobile-tab #search-links {
+  padding: 0 15px 0 15px;
+}
+#search-mobile-tab #search-links div.search-items {
+  justify-content: center !important;
+}
+#search-mobile-tab #search-links div.search-items h5 {
+  font-weight: bold;
+  color: #081E3f;
+  font-family: "Arvo", serif !important;
+}
+#search-mobile-tab #search-links div.search-items li {
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+  list-style: none;
+  background-color: #efefef;
+}
+@media (min-width: 1000px) {
+  #search-mobile-tab #search-links div.search-items li {
+    max-width: 303px;
+  }
+}
+#search-mobile-tab #search-links div.search-items li a {
+  text-decoration: none;
+  color: #081E3f;
+  display: flex;
+  align-items: center;
+}
+#search-mobile-tab #search-links div.search-items li i {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+#search-mobile-tab #search-links div.search-items li span {
+  font-weight: 600;
+  font-size: 16px;
+}
+#search-mobile-tab #search-links div.search-items li:not(.material-icons):hover {
+  text-decoration: underline;
+  background-color: #e6e6e6;
+}
+#search-mobile-tab #search-links div.search-items .info-for-title {
+  margin-top: 16px;
+}
+#search-mobile-tab #search-links div.search-items .info-for .info-for-li a {
+  margin-left: 15px;
+}
 #search-mobile-tab a.close-button {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-top: 12px;
   margin-bottom: 12px;
   text-decoration: none;
@@ -661,44 +794,6 @@ body p, body span, body a {
 #search-mobile-tab a.close-button i {
   position: relative;
   top: 0.9px;
-}
-#search-mobile-tab .form-control {
-  height: auto;
-}
-#search-mobile-tab .input-group-text {
-  background-color: #F8C93E;
-}
-#search-mobile-tab #search-links h5 {
-  font-weight: bold;
-  color: #081E3f;
-}
-#search-mobile-tab #search-links li {
-  margin: 0 10px 10px 10px;
-  padding: 10px;
-  list-style: none;
-  background-color: #efefef;
-}
-#search-mobile-tab #search-links li a {
-  text-decoration: none;
-  color: #081E3f;
-  display: flex;
-  align-items: center;
-}
-#search-mobile-tab #search-links li i {
-  font-size: 16px;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-weight: bold;
-}
-#search-mobile-tab #search-links li span {
-  font-weight: 600;
-  font-size: 16px;
-}
-#search-mobile-tab #search-links .info-for {
-  margin-top: 16px;
-}
-#search-mobile-tab #search-links .info-for-li a {
-  margin-left: 15px;
 }
 
 /***** Mobile Menu Tab ***/
@@ -733,7 +828,7 @@ body p, body span, body a {
 }
 #menu-mobile-tab a.close-button {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-top: 12px;
   margin-bottom: 12px;
   text-decoration: none;

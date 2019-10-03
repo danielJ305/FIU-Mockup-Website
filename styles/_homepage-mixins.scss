@@ -96,7 +96,7 @@
             }
             & #navbarNavDropdown {
                 margin-right:15px !important;
-                justify-content: end !important;
+                justify-content: flex-end !important;
                 & .navbar-nav {
                     display: flex !important;
                     align-items: center !important;
@@ -147,6 +147,8 @@
             background-color: $fiu-blue;
             display: flex;
             justify-content: center;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+            z-index: 500;
             & .big-nav-wrap {
                 max-width: 1000px;
                 width: 100%;
@@ -162,37 +164,51 @@
                         height: 100%;
                         padding:15px;
                         background-color: $fiu-blue;
-                        color:white;
-                        font-weight: 600;
                         outline:0;
+                        position: relative;
+                        & span {
+                            color:white;
+                            font-weight: 600;
+                            font-size: 14.5px;
+                        }
+                        & span::after {
+                            content: "";
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 15px 12px 0 12px;
+                            border-color: transparent transparent transparent transparent;
+                            z-index: 400;
+                            margin: 0 auto;
+                            position: absolute;
+                            left: 50%;
+                            -webkit-transform: translateX(-50%);
+                            transform: translateX(-50%);
+                            display: block;
+                        }
                     }
+                   
                     & button:hover {
-                        text-decoration: underline;
                         background-color: #112D54;
+                        & span {
+                            text-decoration: underline;
+                        }
                     }
                     .active {
                         background-color: $fiu-yellow !important;
-                        color: $fiu-blue;
-                        text-decoration: none !important;
-                        transition: 0.15s ease bottom;
+                        span {
+                            color: $fiu-blue !important;
+                            text-decoration: none !important;
+                        }
+                        span::after {
+                            bottom: -14px;
+                            -webkit-transition: 0.15s ease bottom;
+                            transition: 0.15s ease bottom;
+                            border-color: $fiu-yellow transparent transparent transparent;
+                        }
                     }
 
-                    // .active::after {
-                    //     content: "";
-                    //     width: 0;
-                    //     height: 0;
-                    //     border-style: solid;
-                    //     border-width: 15px 12px 0 12px;
-                    //     border-color: #E8CD7D transparent transparent transparent;
-                    //     margin:0;
-                    //     margin-left:auto;
-                    //     margin-right: auto;
-                    //     position: absolute;
-                    //     left:50%;
-                    //     bottom:-14px;
-                    //     display: block;
-                    //     z-index: 500;
-                    // }
+                   
                     
                 }
                 & li.logo {
@@ -210,6 +226,7 @@
                     z-index: 300;
                     background-color:#f7f7f7;
                     padding:0;
+                    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
                     & .dropdown-wrap {
                         max-width: 1000px;
                         margin: auto;
@@ -611,6 +628,41 @@
             padding-top: 4vw;
         }
         & div {
+            & button {
+                display: none;
+                outline-style: none;
+                box-sizing: border-box;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                padding: 6px 13px 6px 13px;
+                border-radius: 5px;
+                border: 0px;
+                background-color: white;
+                @media (min-width:768px) {
+                    display: flex;
+                    top: 292px;
+                    left:250px;
+                }
+                @media (min-width:795px) {
+                    top:255px
+                }
+                @media (min-width:843px) {
+                    top: 228px
+                }
+                @media (min-width:998px) {
+                    top: 205px
+                }
+                @media (min-width:1024px) {
+                    top: 245px;
+                    left: 0px;
+                }
+
+                & i {
+                    font-weight: bold;
+                    color: $fiu-blue;
+                }
+            }
             & span {
                 & a {
                     color:white;

@@ -48,18 +48,8 @@ body {
 /***** Mobile Search Tab ***/
 
 #search-mobile-tab {
+    @include search-tab;
     @include mobile-close-button;
-    
-    .form-control {
-        height:auto;
-    }
-    .input-group-text {
-        background-color: $fiu-yellow;
-    }
-
-    #search-links {
-        @include mobile-search-links;
-    }
 }
 
 
