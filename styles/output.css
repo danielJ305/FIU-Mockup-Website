@@ -181,22 +181,6 @@ body p, body span, body a {
   text-decoration: none !important;
   transition: 0.15s ease bottom;
 }
-#navbar .regular-navbar .big-nav .big-nav-wrap li .active::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 15px 12px 0 12px;
-  border-color: #E8CD7D transparent transparent transparent;
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
-  position: absolute;
-  left: 50%;
-  bottom: -14px;
-  display: block;
-  z-index: 500;
-}
 #navbar .regular-navbar .big-nav .big-nav-wrap li.logo {
   width: 137px;
   padding: 15px;
