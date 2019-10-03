@@ -7,10 +7,10 @@ body {
     @include headings;
 }
 
-/***** Mobile Navbar ***/
+/***** Navbar ***/
 
 #navbar {
-    @include mobile-navbar;
+    @include navbar;
 }
 
 /***** Intro Vid Section ***/
