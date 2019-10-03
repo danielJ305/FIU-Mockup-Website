@@ -1,25 +1,48 @@
 @import "variables.scss";
 @import "mixins.scss";
+@import "homepage-mixins.scss";
+
 
 body {
-    
+    @include headings;
 }
 
-/***** Mobile Navbar ***/
+/***** Navbar ***/
 
 #navbar {
-    align-items: center;
-    @include logo;
-
-    .global-tools {
-        @include global-tools;
-        @include global-tools-anchor;
-        color: $fiu-blue;
-        span {
-            font-size: $global-tools-font-size;
-        }
-    }
+    @include navbar;
 }
+
+/***** Intro Vid Section ***/
+
+#intro-vid-section {
+    @include intro-vid-sec;
+}
+
+/***** Campus & Community Section ***/
+
+#campus-community-section {
+    @include campus-community-section;
+}
+
+/***** Degree Section ***/
+
+#degree-section {
+    @include degree-section;
+}
+
+/***** Research Section ***/
+
+#research {
+    @include research;
+}
+
+/***** Footer ***/
+
+#footer {
+    @include footer;
+}
+
 
 
 /***** Mobile Search Tab ***/
@@ -61,17 +84,4 @@ body {
     
     @include mobile-menu;
 }
-
-/***** SWUP ***/
-
-.transition-fade {
-    transition: 0.4s;
-    
-}
-
-html.is-animating .transition-fade {
-    
-    transform: translateX(100vw);
-}
-
 

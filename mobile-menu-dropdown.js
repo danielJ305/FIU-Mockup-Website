@@ -1,5 +1,5 @@
 
-document.addEventListener('swup:animationInDone', () => {
+window.addEventListener('load', () => {
 
     const dropdownButton = document.querySelectorAll('button.dropdown-button');
 

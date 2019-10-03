@@ -1,47 +1,16 @@
-/***** Mobile Navbar ***/
+/***** Headings ***/
 
-@mixin global-tools {
-    & i, span {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+@mixin headings {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Arvo',
+        serif;
     }
-    & i {
-        font-weight:bold;
+    p, span, a {
+        font-family: 'Open Sans',
+        sans-serif;
     }
 }
 
-@mixin logo {
-    & .fiu-logo {
-        margin:5px 0 5px 15px;
-    }
-    & img {
-        max-width: 100%;
-        height: $logo-size;
-    }
-}
-
-@mixin global-tools-anchor {
-    & a {
-        text-decoration: none;
-        color: $fiu-blue;
-        font-weight:500;
-        margin-right:15px;
-        padding:5px 0 5px 0;
-    }
-    & a:hover {
-        background-color: $fiu-gray-hover;
-    }
-    #search {
-        padding-left:4px;
-        padding-right:4px;
-        margin-right:0px;
-    }
-    #menu {
-        padding-left:9.2px;
-        padding-right:9.2px;
-    }
-}
 
 /***** Mobile Close Button ***/
 
@@ -69,6 +38,8 @@
 
     @content
 }
+
+
 
 /***** Mobile Search Tab ***/
 
@@ -200,6 +171,7 @@
     }
 
 }
+
 
 /***** Mobile Menu Dropdown JS ***/
 
