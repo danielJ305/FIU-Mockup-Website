@@ -9,6 +9,14 @@ window.document.addEventListener('click', () => {
         previousButton.nextElementSibling.style.display = "none";
     }  
 });
+window.document.addEventListener('touchstart', () => {
+    if (previousButton.classList.contains('active')) {
+        console.log('hey');
+        previousButton.classList.remove('active');
+        previousButton.nextElementSibling.style.display = "none";
+    }
+});
+
 
 for (let i = 0; i < navButton.length; i++) {
     navButton[i].addEventListener('click', (btn) => {
