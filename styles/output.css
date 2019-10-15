@@ -738,7 +738,6 @@ body p, body span, body a {
 #search-mobile-tab #search-links div.search-items h5 {
   font-weight: bold;
   color: #081E3f;
-  font-family: "Arvo", serif !important;
 }
 #search-mobile-tab #search-links div.search-items li {
   margin: 0 10px 10px 10px;
@@ -809,22 +808,6 @@ body p, body span, body a {
 #menu-mobile-tab #mobile-menu-dropdown .active {
   display: flex !important;
   flex-direction: column;
-}
-@keyframes slide {
-  from {
-    font-size: 0;
-    height: 0;
-  }
-  to {
-    max-height: 100%;
-  }
-}
-#menu-mobile-tab #mobile-menu-dropdown button.dropdown-button i .rotatingup {
-  animation: rotateup 1s;
-}
-#menu-mobile-tab #mobile-menu-dropdown button.dropdown-button i .arrow {
-  width: 100%;
-  height: 100%;
 }
 #menu-mobile-tab a.close-button {
   display: flex;
