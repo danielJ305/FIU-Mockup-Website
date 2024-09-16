@@ -1,0 +1,429 @@
+/***** Mobile Navbar ***/
+/***** Intro Vid Section ***/
+/***** Campus & Community Section ***/
+/***** Degrees Section ***/
+/***** Headings ***/
+/***** Mobile Close Button ***/
+/***** Mobile Search Tab ***/
+/***** Mobile Menu Tab ***/
+/***** Mobile Menu Dropdown JS ***/
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Arvo", serif;
+}
+body p, body span, body a {
+  font-family: "Open Sans", sans-serif;
+}
+
+/***** Mobile Navbar ***/
+#navbar {
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
+  position: relative;
+  z-index: 15;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+#navbar .fiu-logo {
+  padding-left: 15px;
+}
+#navbar .fiu-logo img {
+  max-width: 100%;
+  height: 30px;
+}
+#navbar .global-tools {
+  padding-right: 15px;
+  color: #081E3f;
+}
+#navbar .global-tools span {
+  font-size: 12px;
+}
+#navbar .global-tools i,
+#navbar .global-tools span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#navbar .global-tools a,
+#navbar .global-tools i {
+  text-decoration: none;
+  color: #081E3f;
+  font-weight: 500;
+}
+#navbar .global-tools a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#navbar .global-tools a.search {
+  margin-right: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+#navbar .global-tools a.menu {
+  padding-left: 7.7px;
+  padding-right: 7.7px;
+}
+#navbar .global-tools i {
+  font-size: 20px;
+  font-weight: 700 !important;
+}
+#navbar .global-tools a:hover {
+  background-color: #f1f1f1;
+}
+
+/***** Intro Vid Section ***/
+#intro-vid-section .intro-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#intro-vid-section .intro-wrapper video {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 450px;
+  pointer-events: none;
+}
+#intro-vid-section .intro-wrapper .intro-vid-bg {
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#intro-vid-section .intro-wrapper .intro-vid-bg .vid-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 450px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#intro-vid-section .intro-wrapper .intro-vid-bg .vid-content h1 {
+  color: white;
+  font-size: 35px;
+}
+#intro-vid-section .intro-wrapper .intro-vid-bg .vid-content button {
+  outline-style: none;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 435px;
+  padding: 6px 13px 6px 13px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: white;
+}
+#intro-vid-section .intro-wrapper .intro-vid-bg .vid-content button i {
+  font-weight: bold;
+  color: #081E3f;
+}
+@media (min-width: 576px) {
+  #intro-vid-section .intro-wrapper video {
+    height: 550px;
+  }
+  #intro-vid-section .intro-vid-bg {
+    width: 100%;
+    height: 550px;
+  }
+  #intro-vid-section .intro-vid-bg .vid-content button {
+    position: absolute;
+    top: 530px !important;
+  }
+}
+@media (min-width: 960px) {
+  #intro-vid-section .intro-wrapper video {
+    height: 700px;
+  }
+  #intro-vid-section .intro-vid-bg {
+    width: 100%;
+    height: 700px;
+  }
+  #intro-vid-section .intro-vid-bg .vid-content button {
+    position: absolute;
+    top: 680px !important;
+  }
+}
+
+/***** Campus & Community Section ***/
+#campus-community-section {
+  padding: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+#campus-community-section a {
+  text-decoration: none;
+}
+#campus-community-section .c-c-wrapper {
+  padding: 20px;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: block;
+  border: solid 1px #DDD !important;
+  background-color: white;
+  max-width: 930px;
+  margin: auto;
+}
+#campus-community-section .c-c-wrapper:hover {
+  box-shadow: #d4d4d4 0 0 7px;
+  border: solid 1px #c4c4c4 !important;
+}
+#campus-community-section .c-c-content .c-c-img-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#campus-community-section .c-c-content .c-c-img-div img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+#campus-community-section .c-c-content .c-c-text {
+  padding-top: 5px;
+}
+#campus-community-section .c-c-content .c-c-text p {
+  color: #333;
+}
+#campus-community-section .c-c-content .c-c-text span {
+  color: #505050;
+  font-size: 12px;
+  font-weight: 700;
+  padding-bottom: 5px;
+}
+#campus-community-section .c-c-content .c-c-text h5 {
+  color: #081E3f;
+}
+#campus-community-section a {
+  padding: 0;
+}
+#campus-community-section .no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+#campus-community-section .no-gutters > .col,
+#campus-community-section .no-gutters > [class*=col-] {
+  padding-right: 0;
+  padding-left: 0;
+}
+@media (min-width: 576px) {
+  #campus-community-section .c-c-content .c-c-text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #campus-community-section .c-c-content .c-c-img-div {
+    order: 1;
+  }
+  #campus-community-section .c-c-content .c-c-text {
+    order: 2;
+  }
+}
+
+/***** Degree Section ***/
+#degree-section .degrees {
+  background-color: green;
+}
+@media (min-width: 960px) {
+  #degree-section .degrees .deg-img {
+    display: none;
+  }
+}
+
+/***** Mobile Search Tab ***/
+#search-mobile-tab a.close-button {
+  display: flex;
+  justify-content: end;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: #081E3f;
+}
+#search-mobile-tab a.close-button span,
+#search-mobile-tab a.close-button i {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+#search-mobile-tab a.close-button i {
+  position: relative;
+  top: 0.9px;
+}
+#search-mobile-tab .form-control {
+  height: auto;
+}
+#search-mobile-tab .input-group-text {
+  background-color: #F8C93E;
+}
+#search-mobile-tab #search-links h5 {
+  font-weight: bold;
+  color: #081E3f;
+}
+#search-mobile-tab #search-links li {
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+  list-style: none;
+  background-color: #efefef;
+}
+#search-mobile-tab #search-links li a {
+  text-decoration: none;
+  color: #081E3f;
+  display: flex;
+  align-items: center;
+}
+#search-mobile-tab #search-links li i {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+#search-mobile-tab #search-links li span {
+  font-weight: 600;
+  font-size: 16px;
+}
+#search-mobile-tab #search-links .info-for {
+  margin-top: 16px;
+}
+#search-mobile-tab #search-links .info-for-li a {
+  margin-left: 15px;
+}
+
+/***** Mobile Menu Tab ***/
+#menu-mobile-tab {
+  background-color: #112D54;
+  height: 100vh;
+  /***** Mobile Menu Dropdown JS ***/
+  /***************************** ***/
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+#menu-mobile-tab #mobile-menu-dropdown .active {
+  display: flex !important;
+  flex-direction: column;
+}
+@keyframes slide {
+  from {
+    font-size: 0;
+    height: 0;
+  }
+  to {
+    max-height: 100%;
+  }
+}
+#menu-mobile-tab #mobile-menu-dropdown button.dropdown-button i .rotatingup {
+  animation: rotateup 1s;
+}
+#menu-mobile-tab #mobile-menu-dropdown button.dropdown-button i .arrow {
+  width: 100%;
+  height: 100%;
+}
+#menu-mobile-tab a.close-button {
+  display: flex;
+  justify-content: end;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: #081E3f;
+}
+#menu-mobile-tab a.close-button span,
+#menu-mobile-tab a.close-button i {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+#menu-mobile-tab a.close-button i {
+  position: relative;
+  top: 0.9px;
+}
+#menu-mobile-tab .close-button {
+  padding-right: 15px;
+}
+#menu-mobile-tab .close-button span, #menu-mobile-tab .close-button i {
+  color: white;
+  font-weight: 500;
+}
+#menu-mobile-tab .menu-home-button {
+  padding: 15px;
+  padding-right: 32px;
+  padding-left: 32px;
+  background-color: #081E3f;
+}
+#menu-mobile-tab .menu-home-button a {
+  color: white !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list {
+  list-style: none;
+  /** Background Color for Menu dropmenu lists **/
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list button.dropdown-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 53.5px;
+  border: none;
+  padding: 0;
+  border-bottom: 0.5px solid #081E3f;
+  padding-right: 15px;
+  padding-left: 32px;
+  background-color: #112D54;
+  color: white;
+  font-weight: 600;
+  outline: none;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list button.dropdown-button img {
+  width: 20px;
+  height: auto;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.dropdown-items {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.dropdown-items li {
+  animation: slide 0.3s cubic-bezier(0.76, 0.01, 0.59, 1.02);
+  list-style: none;
+  height: 53.5px;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+  border-bottom: 0.5px solid #dcdcdc;
+  background-color: white;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.dropdown-items li a {
+  color: #081E3f;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.dropdown-items li a span {
+  font-weight: 600;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.about li:nth-last-of-type(-n+1) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.locations li:nth-last-of-type(-n+4) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.admissions li:nth-last-of-type(-n+3) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.academics li:nth-last-of-type(-n+5) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.research li:nth-last-of-type(-n+3) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.student-life li:nth-last-of-type(-n+2) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.athletics li:nth-last-of-type(-n+3) {
+  background-color: #f5f5f5 !important;
+}
+#menu-mobile-tab #mobile-menu-dropdown li.dropdown-list ul.alumni li:nth-last-of-type(-n+3) {
+  background-color: #f5f5f5 !important;
+}
+
+/*# sourceMappingURL=output.css.map */
